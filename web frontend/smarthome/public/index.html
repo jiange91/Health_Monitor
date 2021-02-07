@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Soft Home APP</title>
+    <meta name="viewport"content="initial-scale=1,maximum-scale=1,user-scalable=no">
+    <!-- link href="css/ratchet.min.css"rel="stylesheet" -->
+    <link href="css/ratchet.css" rel="stylesheet">
+    <script src="js/ratchet.js"></script> 
+    <script type="text/javascript">
+    </script>
+      <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+   <body style="background-color:white;">
+        <!--header and 2 icons!-->
+         <header class="bar bar-nav" style="height: 80px;padding: 20px;border-color: white;">
+             <a href="#myModalexample3" class="btn btn-link btn-nav pull-left">
+             <span class="icon icon-left-nav"style="color: cadetblue"></span>
+             </a>
+             <!--<a href="#myModalexample2" class="btn pull-right"style="color:#BADFE2;border: none;font-size:1em;">About</a>!-->
+         
+      <h1 class="title"style="color: cadetblue;font-size:1.5em;font-family: sans-serif;">Health Score</h1>
+        </header>
+        <p style="padding-top: 40px;">&nbsp;</p>
+     <!--这里是大标题！-->
+     <div align="center">
+       <br/>
+         <img src="icons/timer.svg" style="float:left; width:50px;height:50px;margin:1px 10px 1px 50px;">
+         <h4 style="color: cadetblue;text-align: left;margin: 15px 5px 5px 5px;font-family:sans-serif">Health Score Record</h4>
+     </div>
+    <div style="padding-left: 30px;padding-bottom: 30px;">
+         <br/><br/>
+         <h4 style="color:cadetblue;margin-left: 10px;font-family: sans-serif;">Records</h4>
+    <div/>
+    <div style="margin-top: 30px; background-color: #E8EDE9; border-radius: 30px; width: 300px; height: 30px; box-shadow: 1px 1px 3px 3px #D7DDD7; -webkit-box-shadow: 1px 1px 3px 3px #D7DDD7;">
+    </div>
+    <br/>
+    <img src="icons/timeline.svg" style="width:300px;">
+        
+    
+    <div style="padding-bottom: 30px;">
+         <br/><br/>
+         <h4 style="color:cadetblue;margin-left: 10px;font-family: sans-serif;">Current</h4>
+    <div/>
+    <canvas id="myCanvas" width="200" height="100"
+     style="margin-top: 15px; background-color: #E8EDE9; border-radius: 30px; width: 300px; height: 30px; box-shadow: 1px 1px 3px 3px #D7DDD7; -webkit-box-shadow: 1px 1px 3px 3px #D7DDD7;">  </canvas>  
+
+        <!--    <input type="range" min="1" max="24" value="1" class="slider" id="myRange">
+        </div> !-->
+        <br/><br/>
+        <span style="font-family: sans-serif;color: cadetblue;font-weight:500;">Health Score:</span> <span id="responseVal" style="font-weight:bold;color: #F2C735;font-weight: 600;"></span>
+      
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="aa.js"></script>
+    </div>
+    <br/>
+    <img src="icons/timeline.svg" style="width:300px;">
+        
+        
+<div class="bar bar-tab">
+         <a class="tab-item" style="height: 60px;">
+             <span class="icon" input type="reset" onClick="resetimage()";><img src="icons/phonecall.svg"></span>
+              <input type="reset" value="contact" style="border: none;background-color:white;font-size: 0.8em;">
+            </a>
+        <a  href="#myModalexample1" class="tab-item" style="height: 60px;">
+               <span class="icon"><img src="icons/home.svg"> </span>
+                <input type="reset" value="home" style="border: none;background-color:white;font-size: 0.8em;">
+        </a>
+  </div>
+        
+        <div id="myModalexample1" class="modal" style="font-family:sans-serif;width:1000px;height:1000px;">
+        <br/>
+        <br/>
+        <br/>
+    <h2 style="color: cadetblue;">Daily Metrics</h2>
+    <canvas id="Canvas1" width="300" height="500"
+     style="border:0px solid #000000;">
+     </canvas>
+    <script type="text/javascript">
+        var c=document.getElementById("Canvas1");
+        var ctx=c.getContext("2d");
+        ctx.fillStyle="#BBEDCB";
+        ctx.fillRect(0,25,120,150);    
+        drawRoundRect(context, 200, 100, 400, 400, 50);   
+        context.strokeStyle = "#0078AA";  
+        context.borderraduis=80px;
+        context.stroke();
+        </script>
+        </div>
+
+    
+ </body>  
+</html>
