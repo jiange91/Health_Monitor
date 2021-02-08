@@ -7,7 +7,8 @@
 EspMQTTClient client(
     "smarthome",
     "unnc@2020",
-    "10.160.1.47",          // MQTT Broker server ip
+    "127.0.0.1"
+    // "10.160.1.47",          // MQTT Broker server ip
     "mqtt_summer_research", // Can be omitted if not needed
     "unnc2020",             // Can be omitted if not needed
     "Device 1",             // Client name that uniquely identify your device
